@@ -63,7 +63,7 @@ jobs:
 
       - name: Costom configure file
         run: |
-          /opt/lede
+          cd /opt/lede
           rm -f ./.config*
           touch ./.config
           #
@@ -697,6 +697,7 @@ jobs:
             CONFIG_PACKAGE_libip4tc=y
             CONFIG_PACKAGE_libip6tc=y
             CONFIG_PACKAGE_libxtables=y
+            CONFIG_PACKAGE_libmbedtls=y
             CONFIG_PACKAGE_libopenssl=y
             CONFIG_OPENSSL_OPTIMIZE_SPEED=y
             CONFIG_OPENSSL_WITH_ASM=y
@@ -711,8 +712,17 @@ jobs:
             CONFIG_OPENSSL_ENGINE=y
             CONFIG_PACKAGE_libopenssl-conf=y
             CONFIG_PACKAGE_libopenssl-devcrypto=y
+            CONFIG_PACKAGE_boost=y
+            CONFIG_boost-compile-visibility-hidden=y
+            CONFIG_boost-static-and-shared-libs=y
+            CONFIG_boost-runtime-shared=y
+            CONFIG_boost-variant-release=y
+            CONFIG_PACKAGE_boost-date_time=y
+            CONFIG_PACKAGE_boost-program_options=y
+            CONFIG_PACKAGE_boost-system=y
             CONFIG_PACKAGE_libblobmsg-json=y
             CONFIG_PACKAGE_libelf=y
+            CONFIG_PACKAGE_libev=y
             CONFIG_PACKAGE_libiwinfo=y
             CONFIG_PACKAGE_libjson-c=y
             CONFIG_PACKAGE_liblua=y
@@ -721,6 +731,8 @@ jobs:
             CONFIG_PACKAGE_libnatpmp=y
             CONFIG_PACKAGE_libnl-tiny=y
             CONFIG_PACKAGE_libpcre=y
+            CONFIG_PACKAGE_libsodium=y
+            CONFIG_LIBSODIUM_MINIMAL=y
             CONFIG_PACKAGE_libubox=y
             CONFIG_PACKAGE_libubus=y
             CONFIG_PACKAGE_libubus-lua=y
@@ -749,7 +761,12 @@ jobs:
             CONFIG_PACKAGE_luci-app-samba=y
             CONFIG_PACKAGE_luci-app-sqm=y
             CONFIG_PACKAGE_luci-app-ssr-plus=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
             CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini=y
             CONFIG_PACKAGE_luci-app-upnp=y
             CONFIG_PACKAGE_luci-app-vlmcsd=y
@@ -815,6 +832,7 @@ jobs:
             CONFIG_PACKAGE_tc=y
             CONFIG_PACKAGE_zerotier=y
             CONFIG_PACKAGE_pdnsd-alt=y
+            CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
             CONFIG_PACKAGE_shadowsocksr-libev-alt=y
             CONFIG_PACKAGE_uhttpd=y
             CONFIG_PACKAGE_uhttpd-mod-ubus=y
@@ -823,7 +841,9 @@ jobs:
             CONFIG_PACKAGE_etherwake=y
             CONFIG_PACKAGE_hostapd-common=y
             CONFIG_PACKAGE_ipset=y
+            CONFIG_PACKAGE_ipt2socks=y
             CONFIG_PACKAGE_iw=y
+            CONFIG_PACKAGE_kcptun-client=y
             CONFIG_PACKAGE_libipset=y
             CONFIG_PACKAGE_nlbwmon=y
             CONFIG_PACKAGE_odhcp6c=y
@@ -834,7 +854,10 @@ jobs:
             CONFIG_PACKAGE_ppp-mod-pppoe=y
             CONFIG_PACKAGE_samba36-server=y
             CONFIG_PACKAGE_SAMBA_MAX_DEBUG_LEVEL=-1
+            CONFIG_PACKAGE_simple-obfs=y
+            CONFIG_PACKAGE_trojan=y
             CONFIG_PACKAGE_uclient-fetch=y
+            CONFIG_PACKAGE_v2ray-plugin=y
             CONFIG_PACKAGE_vlmcsd=y
             CONFIG_WPA_MSG_MIN_PRIORITY=3
             CONFIG_DRIVER_11N_SUPPORT=y
@@ -903,7 +926,6 @@ jobs:
           find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-          cd /opt/lede
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt firmware
