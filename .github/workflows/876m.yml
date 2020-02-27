@@ -604,6 +604,7 @@ jobs:
             CONFIG_PACKAGE_logd=y
             CONFIG_PACKAGE_mtd=y
             CONFIG_PACKAGE_netifd=y
+            CONFIG_PACKAGE_nft-qos=y
             CONFIG_PACKAGE_opkg=y
             CONFIG_PACKAGE_procd=y
             CONFIG_PACKAGE_rpcd=y
@@ -615,6 +616,7 @@ jobs:
             CONFIG_PACKAGE_uci=y
             CONFIG_PACKAGE_urandom-seed=y
             CONFIG_PACKAGE_urngd=y
+            CONFIG_PACKAGE_netdata=y
             CONFIG_PACKAGE_ipv6helper=y
             CONFIG_PACKAGE_wireless-regdb=y
             CONFIG_PACKAGE_kmod-crypto-aead=y
@@ -656,6 +658,9 @@ jobs:
             CONFIG_PACKAGE_kmod-nf-reject=y
             CONFIG_PACKAGE_kmod-nf-reject6=y
             CONFIG_PACKAGE_kmod-nfnetlink=y
+            CONFIG_PACKAGE_kmod-nft-bridge=y
+            CONFIG_PACKAGE_kmod-nft-core=y
+            CONFIG_PACKAGE_kmod-nft-netdev=y
             CONFIG_PACKAGE_kmod-ifb=y
             CONFIG_PACKAGE_kmod-iptunnel=y
             CONFIG_PACKAGE_kmod-iptunnel4=y
@@ -710,6 +715,7 @@ jobs:
             CONFIG_PACKAGE_libminiupnpc=y
             CONFIG_PACKAGE_libmnl=y
             CONFIG_PACKAGE_libnatpmp=y
+            CONFIG_PACKAGE_libnftnl=y
             CONFIG_PACKAGE_libnl-tiny=y
             CONFIG_PACKAGE_libpcre=y
             CONFIG_PACKAGE_libsodium=y
@@ -738,6 +744,8 @@ jobs:
             CONFIG_PACKAGE_luci-app-filetransfer=y
             CONFIG_PACKAGE_luci-app-firewall=y
             CONFIG_PACKAGE_luci-app-flowoffload=y
+            CONFIG_PACKAGE_luci-app-netdata=y
+            CONFIG_PACKAGE_luci-app-nft-qos=y
             CONFIG_PACKAGE_luci-app-nlbwmon=y
             CONFIG_PACKAGE_luci-app-ramfree=y
             CONFIG_PACKAGE_luci-app-sqm=y
@@ -769,6 +777,8 @@ jobs:
             CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
+            CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
+            CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
@@ -789,6 +799,7 @@ jobs:
             CONFIG_PACKAGE_iptables-mod-ipopt=y
             CONFIG_PACKAGE_iptables-mod-tproxy=y
             CONFIG_PACKAGE_miniupnpd=y
+            CONFIG_PACKAGE_nftables=y
             CONFIG_PACKAGE_ddns-scripts=y
             CONFIG_PACKAGE_ddns-scripts_aliyun=y
             CONFIG_PACKAGE_ddns-scripts_dnspod=y
