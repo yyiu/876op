@@ -733,6 +733,8 @@ jobs:
             CONFIG_PACKAGE_luci-app-arpbind=y
             CONFIG_PACKAGE_luci-app-autoreboot=y
             CONFIG_PACKAGE_luci-app-ddns=y
+            CONFIG_PACKAGE_luci-app-dnscrypt-proxy=y
+            CONFIG_PACKAGE_luci-app-dnsforwarder=y
             CONFIG_PACKAGE_luci-app-filetransfer=y
             CONFIG_PACKAGE_luci-app-firewall=y
             CONFIG_PACKAGE_luci-app-flowoffload=y
@@ -753,6 +755,7 @@ jobs:
             CONFIG_PACKAGE_luci-proto-ipv6=y
             CONFIG_PACKAGE_luci-proto-ppp=y
             CONFIG_PACKAGE_luci-proto-relay=y
+            CONFIG_PACKAGE_luci-lib-httpprotoutils=y
             CONFIG_PACKAGE_luci-lib-ip=y
             CONFIG_PACKAGE_luci-lib-jsonc=y
             CONFIG_PACKAGE_luci-lib-nixio=y
@@ -762,6 +765,7 @@ jobs:
             CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+            CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
@@ -788,6 +792,8 @@ jobs:
             CONFIG_PACKAGE_ddns-scripts=y
             CONFIG_PACKAGE_ddns-scripts_aliyun=y
             CONFIG_PACKAGE_ddns-scripts_dnspod=y
+            CONFIG_PACKAGE_dnscrypt-proxy=y
+            CONFIG_PACKAGE_dnscrypt-proxy-resolvers=y
             CONFIG_OPENLDAP_DEBUG=y
             CONFIG_AMULE_CRYPTOPP_STATIC_LINKING=y
             CONFIG_PACKAGE_v2ray=y
@@ -806,6 +812,7 @@ jobs:
             CONFIG_PACKAGE_uhttpd=y
             CONFIG_PACKAGE_uhttpd-mod-ubus=y
             CONFIG_PACKAGE_6in4=y
+            CONFIG_PACKAGE_dnsforwarder=y
             CONFIG_PACKAGE_etherwake=y
             CONFIG_PACKAGE_hostapd-common=y
             CONFIG_PACKAGE_ipset=y
