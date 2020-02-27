@@ -94,8 +94,13 @@ jobs:
           # 
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
+          # 固件压缩:
+          cat >> .config <<EOF
+          CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
+          EOF
           # 编译x64固件:
           cat >> .config <<EOF
+            CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
             CONFIG_MODULES=y
             CONFIG_HAVE_DOT_CONFIG=y
             CONFIG_TARGET_ramips=y
