@@ -100,12 +100,12 @@ jobs:
           EOF
           # 编译x64固件:
           cat >> .config <<EOF
-            CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
             CONFIG_MODULES=y
             CONFIG_HAVE_DOT_CONFIG=y
             CONFIG_TARGET_ramips=y
             CONFIG_TARGET_ramips_mt7621=y
             CONFIG_TARGET_ramips_mt7621_DEVICE_jcg_jhr-ac876m=y
+            CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
             CONFIG_HAS_SUBTARGETS=y
             CONFIG_HAS_DEVICES=y
             CONFIG_TARGET_BOARD="ramips"
@@ -604,7 +604,6 @@ jobs:
             CONFIG_PACKAGE_logd=y
             CONFIG_PACKAGE_mtd=y
             CONFIG_PACKAGE_netifd=y
-            CONFIG_PACKAGE_nft-qos=y
             CONFIG_PACKAGE_opkg=y
             CONFIG_PACKAGE_procd=y
             CONFIG_PACKAGE_rpcd=y
@@ -616,7 +615,6 @@ jobs:
             CONFIG_PACKAGE_uci=y
             CONFIG_PACKAGE_urandom-seed=y
             CONFIG_PACKAGE_urngd=y
-            CONFIG_PACKAGE_netdata=y
             CONFIG_PACKAGE_ipv6helper=y
             CONFIG_PACKAGE_wireless-regdb=y
             CONFIG_PACKAGE_kmod-crypto-aead=y
@@ -658,9 +656,6 @@ jobs:
             CONFIG_PACKAGE_kmod-nf-reject=y
             CONFIG_PACKAGE_kmod-nf-reject6=y
             CONFIG_PACKAGE_kmod-nfnetlink=y
-            CONFIG_PACKAGE_kmod-nft-bridge=y
-            CONFIG_PACKAGE_kmod-nft-core=y
-            CONFIG_PACKAGE_kmod-nft-netdev=y
             CONFIG_PACKAGE_kmod-ifb=y
             CONFIG_PACKAGE_kmod-iptunnel=y
             CONFIG_PACKAGE_kmod-iptunnel4=y
@@ -706,6 +701,14 @@ jobs:
             CONFIG_OPENSSL_ENGINE=y
             CONFIG_PACKAGE_libopenssl-conf=y
             CONFIG_PACKAGE_libopenssl-devcrypto=y
+            CONFIG_PACKAGE_boost=y
+            CONFIG_boost-compile-visibility-hidden=y
+            CONFIG_boost-static-and-shared-libs=y
+            CONFIG_boost-runtime-shared=y
+            CONFIG_boost-variant-release=y
+            CONFIG_PACKAGE_boost-date_time=y
+            CONFIG_PACKAGE_boost-program_options=y
+            CONFIG_PACKAGE_boost-system=y
             CONFIG_PACKAGE_libblobmsg-json=y
             CONFIG_PACKAGE_libelf=y
             CONFIG_PACKAGE_libev=y
@@ -715,7 +718,6 @@ jobs:
             CONFIG_PACKAGE_libminiupnpc=y
             CONFIG_PACKAGE_libmnl=y
             CONFIG_PACKAGE_libnatpmp=y
-            CONFIG_PACKAGE_libnftnl=y
             CONFIG_PACKAGE_libnl-tiny=y
             CONFIG_PACKAGE_libpcre=y
             CONFIG_PACKAGE_libsodium=y
@@ -736,6 +738,7 @@ jobs:
             CONFIG_LUCI_LANG_zh-cn=y
             CONFIG_PACKAGE_luci-mod-admin-full=y
             CONFIG_PACKAGE_luci-app-accesscontrol=y
+            CONFIG_PACKAGE_luci-app-adbyby-plus=y
             CONFIG_PACKAGE_luci-app-arpbind=y
             CONFIG_PACKAGE_luci-app-autoreboot=y
             CONFIG_PACKAGE_luci-app-ddns=y
@@ -744,8 +747,6 @@ jobs:
             CONFIG_PACKAGE_luci-app-filetransfer=y
             CONFIG_PACKAGE_luci-app-firewall=y
             CONFIG_PACKAGE_luci-app-flowoffload=y
-            CONFIG_PACKAGE_luci-app-netdata=y
-            CONFIG_PACKAGE_luci-app-nft-qos=y
             CONFIG_PACKAGE_luci-app-nlbwmon=y
             CONFIG_PACKAGE_luci-app-ramfree=y
             CONFIG_PACKAGE_luci-app-sqm=y
@@ -754,8 +755,11 @@ jobs:
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
             CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+            CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
             CONFIG_PACKAGE_luci-app-upnp=y
             CONFIG_PACKAGE_luci-app-vlmcsd=y
+            CONFIG_PACKAGE_luci-app-vsftpd=y
             CONFIG_PACKAGE_luci-app-wol=y
             CONFIG_PACKAGE_luci-app-zerotier=y
             CONFIG_PACKAGE_luci-theme-bootstrap=y
@@ -769,6 +773,7 @@ jobs:
             CONFIG_PACKAGE_luci-lib-nixio=y
             CONFIG_PACKAGE_default-settings=y
             CONFIG_PACKAGE_luci-i18n-accesscontrol-zh-cn=y
+            CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
@@ -777,12 +782,11 @@ jobs:
             CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
-            CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
-            CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+            CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
             CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
             CONFIG_POSTFIX_TLS=y
@@ -791,6 +795,8 @@ jobs:
             CONFIG_POSTFIX_CDB=y
             CONFIG_POSTFIX_SQLITE=y
             CONFIG_POSTFIX_PCRE=y
+            CONFIG_PACKAGE_vsftpd-alt=y
+            CONFIG_VSFTPD_USE_UCI_SCRIPTS=y
             CONFIG_PACKAGE_wget=y
             CONFIG_PACKAGE_ip6tables=y
             CONFIG_PACKAGE_iptables=y
@@ -799,7 +805,6 @@ jobs:
             CONFIG_PACKAGE_iptables-mod-ipopt=y
             CONFIG_PACKAGE_iptables-mod-tproxy=y
             CONFIG_PACKAGE_miniupnpd=y
-            CONFIG_PACKAGE_nftables=y
             CONFIG_PACKAGE_ddns-scripts=y
             CONFIG_PACKAGE_ddns-scripts_aliyun=y
             CONFIG_PACKAGE_ddns-scripts_dnspod=y
@@ -823,11 +828,14 @@ jobs:
             CONFIG_PACKAGE_uhttpd=y
             CONFIG_PACKAGE_uhttpd-mod-ubus=y
             CONFIG_PACKAGE_6in4=y
+            CONFIG_PACKAGE_adbyby=y
             CONFIG_PACKAGE_dnsforwarder=y
             CONFIG_PACKAGE_etherwake=y
             CONFIG_PACKAGE_hostapd-common=y
             CONFIG_PACKAGE_ipset=y
+            CONFIG_PACKAGE_ipt2socks=y
             CONFIG_PACKAGE_iw=y
+            CONFIG_PACKAGE_kcptun-client=y
             CONFIG_PACKAGE_libipset=y
             CONFIG_PACKAGE_nlbwmon=y
             CONFIG_PACKAGE_odhcp6c=y
@@ -837,6 +845,7 @@ jobs:
             CONFIG_PACKAGE_ppp=y
             CONFIG_PACKAGE_ppp-mod-pppoe=y
             CONFIG_PACKAGE_simple-obfs=y
+            CONFIG_PACKAGE_trojan=y
             CONFIG_PACKAGE_uclient-fetch=y
             CONFIG_PACKAGE_v2ray-plugin=y
             CONFIG_PACKAGE_vlmcsd=y
@@ -848,6 +857,7 @@ jobs:
             CONFIG_PACKAGE_coremark=y
             CONFIG_PACKAGE_coreutils=y
             CONFIG_PACKAGE_coreutils-base64=y
+            CONFIG_PACKAGE_coreutils-nohup=y
             CONFIG_PACKAGE_jshn=y
             CONFIG_PACKAGE_libjson-script=y
             CONFIG_PACKAGE_openssl-util=y
